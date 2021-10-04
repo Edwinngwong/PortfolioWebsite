@@ -1,0 +1,242 @@
+@import "../../global.scss";
+
+.resume2{
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .bigHeader{
+        position: absolute;
+        font-size: 220%;
+        top: 5%;
+
+        @include mobile{
+            top: 5%;
+        }
+    }
+
+    
+    .arrow{
+        position: absolute;
+        font-size: 20vh;
+        height: 80px;
+        color: black;
+        cursor: pointer;
+
+        @include mobile{
+            display: none;
+        }
+
+        &.left{
+            left: 100px;
+        }
+
+        &.right{
+            right: 100px;
+        }
+    }
+
+    a{
+        width: 200px;
+        height: 50px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        bottom: 6%;
+        background-color:$mainBackgroundColor;
+        border-radius: 20px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+
+        @include mobile{
+            width: 100px;
+            height: 30px;
+            font-size: 10px;
+            bottom: 2vh;
+        }
+    }
+
+    
+
+    .slider{
+        //border: solid;
+        height: 350px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease-out;
+
+        @include mobile{
+            height: 78vh;
+            flex-direction: column;
+            //justify-content: center;
+            margin-top: 80px;
+        }
+
+        .container{
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            .item{
+                width: 800px;
+                height: 100%;
+                background-color: white;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include mobile{
+                    flex-direction: column;
+                    width: 90%;
+                    height: 21vh;
+                    margin: 5px 0;
+                }
+        
+
+                .header{
+                    flex: 0.35;
+                    height: 100%;
+                    background-color: $mainBackgroundColor;
+                    color: black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include mobile{
+                        width: 100%;
+                        flex: 0.25;
+                    }
+
+                    h1{
+                        text-decoration: underline;
+
+                        @include mobile{
+                            font-size: 80%;
+                        }
+                    }
+                }
+
+                .content{
+                    flex: 0.65;
+                    height: 100%;
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    background-color: $mainBackgroundColor;
+                    color: black;
+
+                    @include mobile{
+                        width: 100%;
+                        flex: 0.75;
+                    }
+
+                    .wrapper{
+                        //border: solid;
+                        width: 100%;
+                        height: inherit;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        margin-top: 20px;
+
+                        @include mobile{
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            margin-top: 0px;
+                        }
+                        
+
+                        .subHeader{
+                            justify-content: flex-start;
+                            left: 0;
+
+                            h1{
+                                font-size: 30px;
+
+                                @include mobile{
+                                    font-size: 88%;
+                                    text-align: center;
+                                }
+        
+                            }
+                            p{
+                                font-size: 15px;
+
+                                @include mobile{
+                                    font-size: 55%;
+                                }        
+
+                                span{
+                                    font-style: italic;
+                                }
+                            }
+
+                        }
+
+                        .subContent{
+                            //border: solid;
+                            height: 100%;
+                            margin-top: 20px;
+                            flex: 5;
+                            font-size: 15px;
+                            display: flex;
+                            flex-direction: column;
+
+                            p{
+                                margin-bottom: 40px;
+                                font-weight: bold;
+                                overflow: hidden;
+
+                                @include mobile{
+                                    display: inline-block;
+                                    text-align: center;
+                                    justify-content: space-between;
+                                    margin-bottom: 2px;
+                                    font-size: 75%;
+                                    overflow: hidden;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    #button:hover{
+        width: 200px;
+        height: 50px;
+        display: flex;
+        background-color: black;
+        border-radius: 20px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        font-weight: bolder;
+    }
+    
+    // #button::after {
+    //     content: "";
+    //     display: block;
+    //     width: 0;
+    //     height: 2px;
+    //     background-color: black;
+    // }
+
+    // #button:hover::after{
+    //     width: 135px;
+    //     transition: width .3s;
+    // }
+}
