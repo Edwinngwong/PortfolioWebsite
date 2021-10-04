@@ -1,0 +1,10 @@
+$mainBackgroundColor: rgb(233, 233, 233);
+$mainFontColor:#F9F6EE;
+
+$width: 1146px;
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content 
+    }
+}
