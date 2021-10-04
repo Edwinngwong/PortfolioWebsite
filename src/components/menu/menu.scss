@@ -1,0 +1,69 @@
+@import "../../global.scss";
+
+.menu{
+    //border: solid red;
+    width: 140px;
+    background-color: rgba(31,32,36,255);
+    position: fixed;
+    top: 0;
+    right: -400px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    ul{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 120%;
+        
+        li{
+
+            a{
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &.active{
+         right: 0;
+    }
+}
+
+@include mobile{
+    .menu{
+        //border: solid red;
+        width: 140px;
+        background-color: rgba(31,32,36,255);
+        position: fixed;
+        top: 0;
+        right: -400px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        ul{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 120%;
+            
+            li{
+    
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    
+        &.active{
+             right: 0;
+        }
+    }
+}    
